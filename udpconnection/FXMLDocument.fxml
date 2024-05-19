@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="511.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="udpconnection.FXMLDocumentController">
+    <children>
+      <HBox layoutX="13.0" layoutY="54.0" prefHeight="48.0" prefWidth="294.0" spacing="20.0">
+         <children>
+              <Button id="startButton" fx:id="startButton" onAction="#handleServerButtonAction" prefHeight="25.0" prefWidth="120.0" text="Start as Server" />
+            <Button id="connectButton" fx:id="connectButton" onAction="#handleConnectButtonAction" prefHeight="25.0" prefWidth="120.0" text="Connect to Server" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ScrollPane layoutX="31.0" layoutY="108.0" prefHeight="319.0" prefWidth="258.0">
+         <content>
+            <TextFlow id="textBox" fx:id="textBox" prefHeight="318.0" prefWidth="246.0" />
+         </content>
+      </ScrollPane>
+      <HBox layoutX="13.0" layoutY="6.0" prefHeight="48.0" prefWidth="294.0" spacing="20.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="64.0" text="Your name:" />
+            <TextField id="nameField" fx:id="nameField" prefHeight="25.0" prefWidth="174.0" promptText="Type your name here first!" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="13.0" layoutY="427.0" prefHeight="48.0" prefWidth="294.0" spacing="20.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="54.0" text="Message:" />
+            <TextField id="messageField" fx:id="messageField" prefHeight="25.0" prefWidth="187.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Button id="sendButton" fx:id="sendButton" layoutX="134.0" layoutY="472.0" mnemonicParsing="false" onAction="#sendButtonAction" text="Send" />
+    </children>
+</AnchorPane>
